@@ -58,10 +58,10 @@
       <pubDate>Www, dd Mmm yyyy hh:mm:ss +0000</pubDate>
       <enclosure url="" length="0" type="audio/mp4"></enclosure>
       <itunes:author>-</itunes:author>
-      <itunes:subtitle>--</itunes:subtitle>
-      <itunes:summary><![CDATA[-]]></itunes:summary>
+      <itunes:subtitle><SUBTITLE></itunes:subtitle>
+      <itunes:summary><![CDATA[<DESCRIPTION>>]]></itunes:summary>
       <itunes:image href="https://i.ytimg.com/vi/<VIDEI_ID>>/maxresdefault.jpg"></itunes:image>
-      <itunes:duration>--:--</itunes:duration>
+      <itunes:duration>HH:MM:SS</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
       <itunes:order>0</itunes:order>
     </item> -->
