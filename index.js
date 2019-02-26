@@ -10,7 +10,8 @@ if (args.length && args[0] == '--id' && args[1]) {
     const split2 = split1.split('url=')[1]
     const split3 = split2.split('index=')[0]
     const decodedString = decodeURIComponent(split3)
-    const result = decodedString.split('\\u0026')[0]
+    const rawString = decodedString.split('\\u0026')[0]
+    const result = rawString.replace(/&/g, '&#038;')
     console.log(`Audio: ${result}`)
   })
 } else {
