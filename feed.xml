@@ -3,23 +3,27 @@
 	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
 	<channel>
 		<title>esSENSE</title>
-		<link>https://youtube.com/</link>
-		<description>-</description>
+		<link>https://essenseglobal.com</link>
+		<description>esSENSE aspires to be the premier rationalist platform in India.We bring together rationalist speakers, writers, thinkers, activists, supporters, and well-wishers, with the goal of promoting rationalism and freethinking in Kerala and in the larger global environment. Through our publications, e-magazines, seminars, online media, and other collaborative platforms, we will endeavour to develop rationalist thought, share ideas, expand our intellectual horizons, facilitate learning, and foster collaboration. We build a better tomorrow that embraces science and rationality, pursues freethinking and atheism, and elevates humanism and justice, while resisting superstition, quackery, ignorance, and hate. We seek truth, science, and rationality as the essence of life.</description>
 		<category>TV &amp; Film</category>
 		<language>en-us</language>
 		<lastBuildDate>Tue, 26 Feb 2019 10:09:19 +0000</lastBuildDate>
 		<pubDate>Sun, 16 Sep 2018 11:31:27 +0000</pubDate>
 		<image>
-			<url>https://www.ccpl.org/sites/default/files/Apple-Podcasts-app-icon.png</url>
+			<url>https://chandujs.in/essense-podcast/assets/icon.png</url>
 			<title>esSENSE</title>
-			<link>https://youtube.com/</link>
+			<link>https://essenseglobal.com</link>
 		</image>
-		<itunes:author>esSENSE</itunes:author>
+		<itunes:author>esSENSE Global</itunes:author>
 		<itunes:subtitle>esSENSE</itunes:subtitle>
 		<itunes:summary>
-			<![CDATA[-]]>
+			<![CDATA[- esSENSE aspires to be the premier rationalist platform in India.We bring together rationalist speakers, writers, thinkers, activists, supporters, and well-wishers, with the goal of promoting rationalism and freethinking in Kerala and in the larger global environment. Through our publications, e-magazines, seminars, online media, and other collaborative platforms, we will endeavour to develop rationalist thought, share ideas, expand our intellectual horizons, facilitate learning, and foster collaboration.
+
+We build a better tomorrow that embraces science and rationality, pursues freethinking and atheism, and elevates humanism and justice, while resisting superstition, quackery, ignorance, and hate.
+We seek truth, science, and rationality as the essence of life.
+			]]>
 		</itunes:summary>
-		<itunes:image href="https://www.ccpl.org/sites/default/files/Apple-Podcasts-app-icon.png"></itunes:image>
+		<itunes:image href="https://chandujs.in/essense-podcast/assets/icon.png"></itunes:image>
 		<itunes:explicit>no</itunes:explicit>
 		<itunes:category text="TV &amp; Film"></itunes:category>
 	</channel>
