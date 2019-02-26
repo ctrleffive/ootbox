@@ -1,0 +1,23 @@
+{
+  "name": "essense-podcast",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "fetch": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cujslive/essense-podcast.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cujslive/essense-podcast/issues"
+  },
+  "homepage": "https://github.com/cujslive/essense-podcast#readme"
+}
