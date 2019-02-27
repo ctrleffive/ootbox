@@ -21,10 +21,10 @@ const exceute = async () => {
           }
           const result = JSON.parse(body)
           videos = videos.concat(result['items'])
+          console.log(`FETCHED ${videos.length} VIDEOS SO FAR!`)
           if (result['nextPageToken']) {
             videos = await getList(result['nextPageToken'], videos)
           }
-          console.log(`${videos.length} VIDEOS FETCHED!`)
           return resolve(videos)
         })
       })
