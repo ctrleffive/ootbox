@@ -13,9 +13,6 @@ const exceute = async () => {
           playlistApi += `&key=${config.key}`
       if (pageToken) {
         playlistApi += `&pageToken=${pageToken}`
-        console.log(`MORE VIDEOS.. FETCHING NEXT PAGE..`)
-      } else {
-        console.log(`FETCHING FIRST PAGE..`)
       }
       return new Promise((resolve, reject) => {
         request.get(playlistApi, async (error, response, body) => {
@@ -24,10 +21,10 @@ const exceute = async () => {
           }
           const result = JSON.parse(body)
           videos = videos.concat(result['items'])
-          console.log(`${videos.length} VIDEOS FETCHED SO FAR..`)
           if (result['nextPageToken']) {
             videos = await getList(result['nextPageToken'], videos)
           }
+          console.log(`${videos.length} VIDEOS FETCHED!`)
           return resolve(videos)
         })
       })
@@ -94,53 +91,52 @@ const exceute = async () => {
       for (let index = 0; index < videos.length; index++) {
         const video = videos[index]
         const streams = require(streamsPath)
-        const description = video['snippet']['description'].replace(/&/g, '&#038;')
-        const title = video['snippet']['title'].replace(/&/g, '&#038;')
-        const pubDate = new Date(video['snippet']['publishedAt']).toUTCString().replace('GMT', '+00000')
-        const link = `https://youtube.com/watch?v=${video['contentDetails']['videoId']}`
-        const image = `https://i.ytimg.com/vi/${video['contentDetails']['videoId']}/maxresdefault.jpg`
         let audioStream = streams[video['contentDetails']['videoId']] || '#'
-        let duration = 0
-        let length = 0
         if (audioStream != '#') {
-          length = audioStream['length']
-          duration = audioStream['duration']
-          audioStream = audioStream['stream']
+          const length = audioStream['length']
+          const duration = audioStream['duration']
+                audioStream = audioStream['stream']
+          const description = video['snippet']['description'].replace(/&/g, '&#038;')
+          const title = video['snippet']['title'].replace(/&/g, '&#038;')
+          const pubDate = new Date(video['snippet']['publishedAt']).toUTCString().replace('GMT', '+00000')
+          const link = `https://youtube.com/watch?v=${video['contentDetails']['videoId']}`
+          const image = `https://i.ytimg.com/vi/${video['contentDetails']['videoId']}/maxresdefault.jpg`
+
+          const videoXml = {
+            'name': 'item',
+            'children': [
+              {'link': link},
+              {'pubDate': pubDate},
+              {'guid': audioStream},
+              {
+                'name': 'enclosure',
+                'attrs': {
+                  'url': audioStream,
+                  'length': length,
+                  'type': 'audio/mp3'
+                }
+              },
+              {'title': title},
+              {'description': description},
+              {
+                'name': 'itunes:image',
+                'attrs': {
+                  'href': image
+                }
+              },
+              {'itunes:order': index},
+              {'itunes:author': 'esSENSE'},
+              {'itunes:summary': `<![CDATA[${description}]]>`},
+              {'itunes:subtitle': title},
+              {'itunes:explicit': 'no'},
+              {'itunes:duration': duration},
+            ]
+          }
+          basicData[0]['children'][0]['children'].push(videoXml)
         }
-        const videoXml = {
-          'name': 'item',
-          'children': [
-            {'link': link},
-            {'pubDate': pubDate},
-            {'guid': audioStream},
-            {
-              'name': 'enclosure',
-              'attrs': {
-                'url': audioStream,
-                'length': length,
-                'type': 'audio/mp3'
-              }
-            },
-            {'title': title},
-            {'description': description},
-            {
-              'name': 'itunes:image',
-              'attrs': {
-                'href': image
-              }
-            },
-            {'itunes:order': index},
-            {'itunes:author': 'esSENSE'},
-            {'itunes:summary': `<![CDATA[${description}]]>`},
-            {'itunes:subtitle': title},
-            {'itunes:explicit': 'no'},
-            {'itunes:duration': duration},
-          ]
-        }
-        basicData[0]['children'][0]['children'].push(videoXml)
       }
       const xmlData = jsonxml(basicData)
-      fs.writeFileSync('./feed-new.xml', xmlData, (error) => {
+      fs.writeFileSync('./feed.xml', xmlData, (error) => {
         if(error) {
           return console.log(error)
         }
@@ -154,7 +150,7 @@ const exceute = async () => {
     writeToFeed(allVideos)
 
   } else {
-    throw new Error('No config file!')
+    throw new Error('NO CONFIG FILE!')
   }
 }
 
