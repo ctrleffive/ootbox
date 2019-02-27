@@ -10,9 +10,8 @@ if (args.length && args[0] == '--id' && args[1]) {
     const split2 = split1.split('url=')[1]
     const split3 = split2.split('index=')[0]
     const decodedString = decodeURIComponent(split3)
-    const rawString = decodedString.split('\\u0026')[0]
-    console.log(`Audio: ${rawString}`)
-    console.log(`Feed: ${rawString.replace(/&/g, '&#038;')}`)
+    const result = decodedString.split('\\u0026')[0]
+    console.log(`Audio: ${result}`)
   })
 } else {
   console.log("please provide '--id'")
