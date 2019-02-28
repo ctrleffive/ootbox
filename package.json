@@ -1,6 +1,6 @@
 {
-  "name": "essense-podcast",
-  "version": "1.0.0",
+  "name": "ootbox",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cujslive/essense-podcast.git"
+    "url": "git+https://github.com/cujslive/ootbox.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cujslive/essense-podcast/issues"
+    "url": "https://github.com/cujslive/ootbox/issues"
   },
-  "homepage": "https://github.com/cujslive/essense-podcast#readme",
+  "homepage": "https://github.com/cujslive/ootbox#readme",
   "dependencies": {
     "jsontoxml": "^1.0.1",
     "request": "^2.88.0"

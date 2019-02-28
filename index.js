@@ -41,41 +41,28 @@ const exceute = async () => {
         'children': [{
             'name': 'channel',
             'children': [
-              {'title': 'esSENSE'},
-              {'link': 'https://essenseglobal.com'},
-              {'description': 'esSENSE aspires to be the premier rationalist platform in India.We bring together rationalist speakers, writers, thinkers, activists, supporters, and well-wishers, with the goal of promoting rationalism and freethinking in Kerala and in the larger global environment. Through our publications, e-magazines, seminars, online media, and other collaborative platforms, we will endeavour to develop rationalist thought, share ideas, expand our intellectual horizons, facilitate learning, and foster collaboration.&#xA;&#xA;We build a better tomorrow that embraces science and rationality, pursues freethinking and atheism, and elevates humanism and justice, while resisting superstition, quackery, ignorance, and hate.&#xA;We seek truth, science, and rationality as the essence of life.'},
+              {'title': 'OotBox'},
+              {'link': 'https://ootbox.chandujs.in/'},
+              {'description': ''},
               {'category': 'Nonprofits &amp; Activism'},
-              {'language': 'en-us'},
+              {'language': 'en-in'},
               {'lastBuildDate': lastBuildDate},
               {'pubDate': '16 Sep 2018 11:31:27 +0000'},
               {
                 'name': 'image',
                 'children': [
-                  {'title': 'esSENSE'},
-                  {'link': 'https://essenseglobal.com'},
-                  {'url': 'https://chandujs.in/essense-podcast/assets/icon.png'},
+                  {'title': 'OotBox'},
+                  {'link': 'https://ootbox.chandujs.in/'},
+                  {'url': 'https://ootbox.chandujs.in/assets/icon.png'},
                 ]
               },
-              {'itunes:author': 'esSENSE Global'},
-              {'itunes:subtitle': 'esSENSE'},
-              {'itunes:summary': `<![CDATA[esSENSE aspires to be the premier rationalist platform in India.We bring together rationalist speakers, writers, thinkers, activists, supporters, and well-wishers, with the goal of promoting rationalism and freethinking in Kerala and in the larger global environment. Through our publications, e-magazines, seminars, online media, and other collaborative platforms, we will endeavour to develop rationalist thought, share ideas, expand our intellectual horizons, facilitate learning, and foster collaboration.
-			
-                We build a better tomorrow that embraces science and rationality, pursues freethinking and atheism, and elevates humanism and justice, while resisting superstition, quackery, ignorance, and hate.
-                
-                We seek truth, science, and rationality as the essence of life.
-                
-                esSENSE Social links:
-                Website of esSENSE: http://essenseglobal.com/
-                Website of neuronz: http://neuronz.in
-                FaceBook Group: https://www.facebook.com/groups/esSENSEGlobal/
-                FaceBook Page of esSENSE: https://www.facebook.com/essenseglobal/
-                FaceBook Page of neuronz: https://www.facebook.com/neuronz.in/
-                Twitter: https://twitter.com/esSENSEGlobal
-                Podcast: http://podcast.essenseglobal.com/]]>`},
+              {'itunes:author': 'Chandu J S'},
+              {'itunes:subtitle': 'OotBox'},
+              {'itunes:summary': `<![CDATA[]]>`},
                 {
                   'name': 'itunes:image',
                   'attrs': {
-                    'href': 'https://chandujs.in/essense-podcast/assets/icon.png'
+                    'href': 'https://ootbox.chandujs.in/assets/icon.png'
                   }
                 },
                 {'itunes:explicit': 'no'},
@@ -125,7 +112,7 @@ const exceute = async () => {
                 }
               },
               {'itunes:order': index},
-              {'itunes:author': 'esSENSE'},
+              {'itunes:author': 'Source Author'},
               {'itunes:summary': `<![CDATA[${description}]]>`},
               {'itunes:subtitle': title},
               {'itunes:explicit': 'no'},
