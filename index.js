@@ -47,7 +47,7 @@ const exceute = async () => {
               {'category': 'Nonprofits &amp; Activism'},
               {'language': 'en-in'},
               {'lastBuildDate': lastBuildDate},
-              {'pubDate': '16 Sep 2018 11:31:27 +0000'},
+              {'pubDate': '26 Feb 2019 23:58:00 +0530'},
               {
                 'name': 'image',
                 'children': [
@@ -85,7 +85,7 @@ const exceute = async () => {
                 audioStream = audioStream['stream']
           const description = video['snippet']['description'].replace(/&/g, '&#038;')
           const title = video['snippet']['title'].replace(/&/g, '&#038;')
-          const pubDate = new Date(video['snippet']['publishedAt']).toUTCString().replace('GMT', '+00000')
+          const pubDate = new Date(video['contentDetails']['videoPublishedAt']).toUTCString().replace('GMT', '+0530')
           const link = `https://youtube.com/watch?v=${video['contentDetails']['videoId']}`
           const image = `https://i.ytimg.com/vi/${video['contentDetails']['videoId']}/maxresdefault.jpg`
 
